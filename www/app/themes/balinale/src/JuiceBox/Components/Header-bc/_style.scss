@@ -46,7 +46,6 @@
     &__logo {
         width: 100%;
         max-width: 230px;
-
         background: {
             image: image('logo.svg');
             position: left center;
@@ -132,13 +131,13 @@
     &__li {
         position: relative;
 
-        &+.nav__li {
+        & + .nav__li {
             @include mq($until: sm) {
                 border-top: 1px solid $brand-primary;
             }
         }
 
-        &--submenu-open>.nav__toggle {
+        &--submenu-open > .nav__toggle {
             @include mq($until: sm) {
                 i {
                     transform: rotate(90deg);
@@ -148,14 +147,14 @@
 
         @include mq(sm) {
             @include on-event() {
-                >.nav__submenu {
+                > .nav__submenu {
                     opacity: 1;
                     pointer-events: auto;
                     z-index: 998;
                     transition: all 0s 0s, opacity $transition-fast;
                 }
 
-                >.nav__a .nav__a__title {
+                > .nav__a .nav__a__title {
                     .nav__submenu & {
                         transform: translateX(10px);
                     }
@@ -237,7 +236,7 @@
             transition: all 0s $transition-speed-fast, opacity $transition-fast;
         }
 
-        .nav__li+.nav__li {
+        .nav__li + .nav__li {
             @include mq($until: sm) {
                 border-top: 1px solid rgba($white, 0.8);
             }
@@ -289,163 +288,6 @@
 
         &:focus {
             top: 0;
-        }
-    }
-}
-
-// custom header styles
-
-.header {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    height: 85px;
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-    background-color: #fffff9;
-
-    &.scroll {
-        background-color: #fffff9;
-        box-shadow: 0 3px 25px 2px rgba(0, 0, 0, 0.1);
-
-        .header-wrap-item-logo {
-            a {
-                color: #2e2e2e;
-            }
-        }
-    }
-
-    &.top {
-        background-color: transparent;
-
-        .header-wrap-item-logo {
-            a {
-                color: #fffff9;
-            }
-        }
-    }
-
-    .container {
-        width: 100%;
-        margin: auto;
-        max-width: 1311px;
-        margin-right: 64px;
-        padding: unset;
-        margin-left: 64px;
-    }
-
-    &-wrap {
-        display: flex;
-        justify-content: space-between;
-
-        &-item {
-            display: flex;
-            // font-family: $kanit;
-
-            &-logo {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                color: #2e2e2e;
-
-                a {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    font-size: 26px;
-                    color: $hrw-dark;
-                }
-
-                svg {
-                    &:last-child {
-                        opacity: 0;
-                        position: absolute;
-                        transition: $transition-default;
-
-                        .scroll & {
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-
-            &-menu {
-                display: flex;
-                align-items: center;
-
-                .nav {
-                    display: flex;
-                    gap: 56px;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 100%;
-
-                    li {
-                        a {
-                            color: $dark;
-
-                            .scroll & {
-                                color: $dark;
-                            }
-
-                            .top & {
-                                color: $hrw-white !important;
-                            }
-
-                            &:hover {
-                                color: $hrw-dark;
-                            }
-                        }
-                    }
-
-                    li:last-child {
-                        margin-right: 64px;
-                    }
-                }
-
-                &-item {
-                    &-button {
-                        &-toogle {
-                            background: transparent;
-                            border: transparent;
-                        }
-
-                        svg {
-                            path {
-                                stroke: $sand;
-                                transition: $transition-default;
-
-                                .scroll & {
-                                    stroke: $dark;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-}
-
-@include mq($until : 1440px) {
-    .header {
-        .container {
-            padding-left: 18px;
-            padding-right: 18px;
-        }
-
-        &-wrap {
-            &-item {
-                &-logo {
-                    a {
-                        font-size: 18px;
-                    }
-                }
-            }
         }
     }
 }

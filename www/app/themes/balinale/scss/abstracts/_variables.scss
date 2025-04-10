@@ -49,6 +49,8 @@ $yellow: #ffc107 !default;
 $green: #28a745 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
+$hrw-white: #fffff9 !default;
+$hrw-dark: #2e2e2e !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -978,3 +980,19 @@ $pre-scrollable-max-height: 340px !default;
 // Printing
 $print-page-size: a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, 'lg') !default;
+
+$tan: 'TAN - NIMBUS';
+$league: 'League Spartan', sans-serif;
+$quicksand: 'Quicksand', sans-serif;
+// color
+
+$hover: #f47d72;
+$dark: #1f2121;
+$sand: #fde8e4;
+$purple: #1e1541;
+
+$text-dark: #1e1541;
+
+// transition
+
+$transition-default: all 0.3s ease-in-out;
