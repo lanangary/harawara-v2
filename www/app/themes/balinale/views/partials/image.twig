@@ -1,0 +1,7 @@
+{% set image_sizes = get_image_sizes(image, image_tablet, image_mobile, module.options, sizes) %}
+
+<picture>
+    <source srcset="{{ image_sizes.mobile_image }}" media="(max-width: 768px)">
+    <source srcset="{{ image_sizes.tablet_image }}" media="(max-width: 1024px)">
+    <img class="{{ class }}" src="{{ image_sizes.desktop_image }}" alt="{{ get_image(image).alt ?: get_image(image).file }}" {{ no_lazy ? '' : 'loading="lazy"' }}>
+</picture>

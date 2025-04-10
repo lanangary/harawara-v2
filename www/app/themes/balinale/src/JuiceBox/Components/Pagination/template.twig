@@ -1,0 +1,25 @@
+{% if posts.pagination is defined and posts.pagination.pages is not empty %}
+    <nav class="pagination padding-fluid-small">
+        <ul class="pagination__list">
+            {% if posts.pagination.prev is not empty %}
+                <li class="pagination__list__item pagination__list__item--control">
+                    <a href="{{ posts.pagination.prev.link }}" title="Previous" class="pagination__list__link">Prev</a>
+                </li>
+            {% endif %}
+            {% for item in posts.pagination.pages %}
+                <li class="{{ item.class }} pagination__list__item {{ item.current ? ' pagination__list__item--current' : '' }}">
+                    {% if "dots" in item.class %}
+                        <span class="pagination__list__dots">&hellip;</span>
+                    {% else %}
+                        <a href="{{ item.link }}" class="pagination__list__link">{{ item.name }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            {% if posts.pagination.next is not empty %}
+                <li class="pagination__list__item pagination__list__item--control">
+                    <a href="{{ posts.pagination.next.link }}" title="Next" class="pagination__list__link">Next</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+{% endif %}

@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+    background-color: darken($brand-primary, 10%);
+    color: $white;
+
+    a {
+        color: inherit;
+    }
+
+    &__menu-wrapper {
+        @include mq($until: sm) {
+            order: -1;
+        }
+    }
+
+    &__menu {
+        padding: 0 0 10px 0;
+        margin: 0;
+        list-style: none;
+
+        @include mq(sm) {
+            padding: 0;
+        }
+
+        &__li {
+            display: block;
+
+            @include mq(sm) {
+                display: inline-block;
+            }
+        }
+
+        &__link {
+            display: block;
+            padding: 10px 0 0;
+
+            @include mq(sm) {
+                padding: 0 20px;
+            }
+
+            @include on-event() {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.footer-base {
+    background: $brand-primary;
+    color: $white;
+
+    a {
+        color: inherit;
+    }
+
+    &__contact-link {
+        @include mq($until: sm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__social_links {
+        margin-top: 10px;
+
+        @include mq(sm) {
+            margin-top: 0;
+            text-align: right;
+        }
+    }
+
+    &__social_link {
+        padding: 8px;
+
+        i {
+            font-size: 14px;
+            padding: 8px;
+            border-radius: 50%;
+            background-color: $white;
+            color: $brand-primary;
+        }
+    }
+}
