@@ -1,0 +1,32 @@
+<div class="module no-padding padding-fluid hero" {% if not module.background_video %} style="background-image: url('{{ module.background.url | escape }}');" {% endif %}>
+	{# auto play video #}
+	<video autoplay muted loop>
+		<source src="{{module.background_video.url}} " type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+
+	<div class="container">
+		<div class="hero-wrapper">
+			<div class="hero-phone">
+				<div class="hero-phone-base">
+					<img src="{{ site.theme.link }}/img/iphone-no-bg.png" alt="">
+					<img src="{{module.image_slider[0].url}}" alt="">
+				</div>
+				{{d(module.image_slider[0].url)}} <!-- This is the image slider, you can add more images in the module settings -->
+			</div>
+			<div class="hero-content">
+				<div class="hero-content-title-sub quicksand t24 twhite">{{module.subtitle}}</div>
+				<div class="hero-content-title league-spartan mh72 twhite">{{module.title}}</div>
+				<div class="hero-content-button">
+					<div class="hero-content-button-wrapper button">
+						{% include "partials/button-arrow.twig" with {
+                            button: module.button,
+                            class: 'tblack bg-white',
+                            icon: 'arrow'
+                        } %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

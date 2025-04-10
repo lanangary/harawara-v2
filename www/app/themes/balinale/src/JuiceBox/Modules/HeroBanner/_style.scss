@@ -1,0 +1,106 @@
+.hero {
+    // background no repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+
+    background: black;
+    overflow: hidden;
+    position: relative;
+    max-height: 738px;
+
+    position: relative;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        opacity: 0.8;
+    }
+
+    .container {
+        padding-top: 120px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &-wrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    &-phone {
+        width: 100%;
+
+        &-base {
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            img {
+                height: 100%;
+                z-index: 1;
+
+                &:last-child {
+                    position: absolute;
+                    z-index: 0;
+                    width: 230px;
+                    object-fit: cover;
+                    height: 450px;
+                    border-radius: 10%;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+
+    &-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-title {
+            margin-top: 16px;
+        }
+
+        &-button {
+            margin-top: 32px;
+        }
+    }
+}
+
+
+@include mq($until: 1440px) {
+    .hero {
+        &-wrapper {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-phone {
+            &-base {
+                height: 280px;
+
+                img {
+                    &:last-child {
+                        width: 120px;
+                        height: 250px;
+                    }
+                }
+            }
+        }
+
+        video {
+            height: 100%;
+        }
+    }
+}
