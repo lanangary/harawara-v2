@@ -15,6 +15,34 @@
 
         &-item {
             width: calc(25% - 15px);
+
+            @include mq($until: lg) {
+                width: calc(33% - 15px);
+            }
+
+            @include mq($until: md) {
+                width: calc(50% - 10px);
+            }
+
+            &-content {
+                padding: clamp(5px, calc(20 * 100vw / 1440), 20px)
+                    clamp(15px, calc(15 * 100vw / 1440), 30px);
+
+                &-pre {
+                    font-size: 20px;
+                    margin-bottom: 6px;
+                }
+
+                &-title {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+                &-price {
+                    margin-top: 16px;
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
 }
