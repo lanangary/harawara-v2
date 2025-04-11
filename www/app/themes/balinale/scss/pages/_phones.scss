@@ -1,0 +1,22 @@
+.phone-showcase-item {
+    position: relative;
+
+    &-case {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-on {
+            position: relative;
+            z-index: 2;
+        }
+        &-image {
+            position: absolute;
+            width: 80%;
+            height: 91%;
+            border-radius: 25px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

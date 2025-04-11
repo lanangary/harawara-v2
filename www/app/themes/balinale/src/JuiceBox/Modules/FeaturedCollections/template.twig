@@ -1,0 +1,45 @@
+<div class="module featured-collections">
+	<div class="container">
+		<div class="featured-collections-wrap">
+			<div class="featured-collections-heading">
+				<div class="featured-collections-heading-head">
+					<div class="featured-collections-heading-head-title">
+						<h2>{{module.title}}</h2>
+					</div>
+					<div class="featured-collections-heading-head-subtitle">
+						{{module.subtitle}}
+					</div>
+				</div>
+
+				<div class="featured-collections-heading-head-button">
+					<div class="featured-collections-heading-head-button-wrapper button">
+						{% include "partials/button-arrow.twig" with {
+							button: module.button,
+							class: 'tblack bg-white',
+							icon: 'arrow'
+						} %}
+					</div>
+				</div>
+			</div>
+
+			<div class="featured-collections-content">
+				<div class="featured-collections-content-wrap">
+
+					{% for item in module.featured_content %}
+
+						{% include "FeaturedCollections/single-item.twig" with {
+							item:item
+						} %}
+						{% include "FeaturedCollections/single-item.twig" with {
+							item:item
+						} %}
+						{% include "FeaturedCollections/single-item.twig" with {
+							item:item
+						} %}
+
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

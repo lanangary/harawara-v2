@@ -1,0 +1,44 @@
+<div class="featured-collections-content-item">
+	<div class="featured-collections-content-item-wrap">
+		<div class="featured-collections-content-item-image">
+			{% set image = item.meta('collections_group').image %}
+			{% include "partials/phone-showcase.twig" with {
+										image: image,
+									} %}
+		</div>
+		<div class="featured-collections-content-item-content">
+			<div class="featured-collections-content-item-content-pre">
+				Design Undangan
+			</div>
+			<div class="featured-collections-content-item-content-title">
+				{{item.meta('collections_group').name}}
+			</div>
+			<div class="featured-collections-content-item-content-price">
+				{% set price = item.meta('collections_group').price %}
+				{% if price is not empty %}
+					Rp.
+					{{ price }}
+				{% endif %}
+			</div>
+			<div class="featured-collections-content-item-content-button">
+				{% set button = item.meta('collections_group').link %}
+				{# change the array inside the button -> button.title to Lihat semua #}
+
+				{% if button is not empty %}
+					{% set button = {
+												title: 'Lihat Semua',
+												link: item.meta('collections_group').link
+											} %}
+				{% endif %}
+
+				<div class="featured-collections-content-item-content-button-wrapper button">
+					{% include "partials/button-arrow.twig" with {
+												button: button,
+												class: 'tblack bg-white',
+												icon: 'arrow'
+											} %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
