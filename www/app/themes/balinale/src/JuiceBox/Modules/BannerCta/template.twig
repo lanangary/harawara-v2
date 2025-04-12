@@ -29,6 +29,28 @@
 				{% include "partials/image.twig" with {
                     image: module.image,
                 } %}
+
+				{% if module.timer %}
+					<div class="banner-cta-timer" data-timer="{{module.timer}}">
+						<div class="banner-cta-timer-wrap">
+							<div class="banner-cta-timer-set" data-set="days">
+								<div class="banner-cta-timer-set-number quicksand t32">
+									<div class="banner-cta-timer-set-number-value">0</div>
+									<div class="banner-cta-timer-set-number-value">0</div>
+								</div>
+								<div class="banner-cta-timer-set-text quicksand twhite t26">days</div>
+							</div>
+							<div class="banner-cta-timer-set" data-set="hours">
+								<div class="banner-cta-timer-set-number quicksand t32">
+									<div class="banner-cta-timer-set-number-value">0</div>
+									<div class="banner-cta-timer-set-number-value">0</div>
+								</div>
+								<div class="banner-cta-timer-set-text quicksand twhite t26">Hours</div>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+
 			</div>
 		</div>
 	</div>

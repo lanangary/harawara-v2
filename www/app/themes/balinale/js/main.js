@@ -12,3 +12,5 @@ import 'JBSrc/gtm-events';
 import 'JBComponent/Header';
 import 'JBComponent/Searchbox';
 import 'JBComponent/PageReader';
+
+import 'JBModule/BannerCta';

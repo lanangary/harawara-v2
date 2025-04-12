@@ -1,0 +1,24 @@
+.text-wysig {
+    &-title {
+        width: 60%;
+
+        @include mq($until: md) {
+            width: 100%;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        margin-top: 48px;
+
+        li {
+            width: 50%;
+
+            @include mq($until: md) {
+                width: 100%;
+            }
+        }
+    }
+}
