@@ -40,7 +40,9 @@
 
 // 7. Modules
 @import
-'~JBModule/HeroBanner/style','~JBModule/FeaturedCollections/style';
+'~JBModule/HeroBanner/style',
+'~JBModule/FeaturedCollections/style',
+'~JBModule/BannerCta/style';
 
 // 8. Page-specific styles
 @import 'pages/phones';

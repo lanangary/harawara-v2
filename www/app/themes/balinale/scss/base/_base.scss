@@ -107,6 +107,10 @@ button {
     pointer-events: none;
 }
 
+.transform-none {
+    text-transform: none !important;
+}
+
 .nimbus {
     font-family: 'TAN - NIMBUS';
 }
@@ -144,7 +148,7 @@ button {
 }
 
 .mh62 {
-    font-size: 62px;
+    font-size: clamp(42px, calc(62 * 100vw / 1440), 62px);
     width: 100%;
     font-weight: 700;
     line-height: 100%;
@@ -178,6 +182,10 @@ button {
 
 .t36 {
     font-size: 36px;
+}
+
+.t62 {
+    font-size: clamp(42px, calc(62 * 100vw / 1440), 62px);
 }
 
 // button
@@ -239,7 +247,7 @@ a {
     }
 }
 
-@include mq($until: 1440px) {
+@include mq($until: lg) {
     .module {
         &.padding-large {
             padding: clamp(45px, calc(45 * 100vw / 375), 120px) 0px;

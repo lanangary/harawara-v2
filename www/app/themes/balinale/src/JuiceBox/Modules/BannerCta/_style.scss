@@ -1,0 +1,39 @@
+.banner-cta {
+    &-wrap {
+        display: flex;
+        gap: clamp(30px, calc(60 * 100vw / 1440), 60px);
+        display: flex;
+        align-items: center;
+
+        @include mq($until: md) {
+            flex-direction: column;
+        }
+    }
+
+    &.cta-contain {
+        .banner-cta {
+            &-wrap {
+                padding: 40px 80px;
+                padding: 40px clamp(20px, calc(80 * 100vw / 1440), 80px);
+                background: $hrw-dark;
+            }
+            &-content {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 70%;
+
+                @include mq($until: md) {
+                    width: 100%;
+                }
+            }
+
+            &-image {
+                width: 30%;
+                @include mq($until: md) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

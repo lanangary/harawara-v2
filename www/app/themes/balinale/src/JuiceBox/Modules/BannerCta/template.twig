@@ -1,0 +1,32 @@
+{% set padding = 'contain' %}
+{% if module.padding == 'full' %}
+	{% set padding = 'full' %}
+{% endif %}
+
+<div class="module padding-fluid banner-cta cta-{{padding}}">
+	<div class="container container-{{padding}}">
+		<div class="banner-cta-wrap">
+			<div class="banner-cta-content">
+				<div class="banner-cta-content-title league-spartan mh62 twhite transform-none">
+					{{ module.title }}
+				</div>
+				<div class="banner-cta-content-description twhite quicksand t20">
+					{{ module.description|wpautop }}
+				</div>
+				<div class="banner-cta-content-button button">
+					{% include "partials/button-arrow.twig" with {
+                        button: module.button,
+                        class: 'tblack bg-white',
+                        icon: 'arrow'
+                    } %}
+				</div>
+			</div>
+
+			<div class="banner-cta-image">
+				{% include "partials/image.twig" with {
+                    image: module.image,
+                } %}
+			</div>
+		</div>
+	</div>
+</div>

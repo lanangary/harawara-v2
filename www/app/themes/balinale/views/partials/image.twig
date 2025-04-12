@@ -1,7 +1,59 @@
-{% set image_sizes = get_image_sizes(image, image_tablet, image_mobile, module.options, sizes) %}
+{% set desktop_size = 'large' %}
+{% set tablet_size = 'large' %}
+{% set mobile_size = 'large' %}
+
+{% set image_mobile_src = image %}
+{% set image_tablet_src = image %}
+
+{% if image_mobile %}
+	{% set image_mobile_src = image_mobile %}
+{% endif %}
+
+{% if image_tablet %}
+	{% set image_tablet_src = image_tablet %}
+{% endif %}
+
+{% set desktop_image = Image(image).src(desktop_size) %}
+{% set tablet_image = Image(image_tablet_src).src(tablet_size) %}
+{% set mobile_image = Image(image_mobile_src).src(mobile_size) %}
+
+
+{% if module.options.image_size != 'custom' %}
+	{% set desktop_image = Image(image).src(module.options.image_size) %}
+{% endif %}
+
+{% if module.options.image_size == 'custom' %}
+	{% if module.options.custom_image_size.width is not empty and module.options.custom_image_size.height is not empty %}
+		{% set desktop_image = Image(image).src('full')|resize(module.options.custom_image_size.width, module.options.custom_image_size.height) %}
+	{% endif %}
+{% endif %}
+
+{% if sizes.desktop %}
+	{% if sizes.desktop.width and sizes.desktop.height %}
+		{% set desktop_image = Image(image).src('full')|resize(sizes.desktop.width, sizes.desktop.height) %}
+	{% else %}
+		{% set desktop_image = Image(image).src(sizes.desktop) %}
+	{% endif %}
+{% endif %}
+
+{% if sizes.tablet %}
+	{% if sizes.tablet.width and sizes.tablet.height %}
+		{% set tablet_image = Image(image).src('full')|resize(sizes.tablet.width, sizes.tablet.height) %}
+	{% else %}
+		{% set tablet_image = Image(image).src(sizes.tablet) %}
+	{% endif %}
+{% endif %}
+
+{% if sizes.mobile %}
+	{% if sizes.mobile.width and sizes.mobile.height %}
+		{% set mobile_image = Image(image).src('full')|resize(sizes.mobile.width, sizes.mobile.height) %}
+	{% else %}
+		{% set mobile_image = Image(image).src(sizes.mobile) %}
+	{% endif %}
+{% endif %}
 
 <picture>
-    <source srcset="{{ image_sizes.mobile_image }}" media="(max-width: 768px)">
-    <source srcset="{{ image_sizes.tablet_image }}" media="(max-width: 1024px)">
-    <img class="{{ class }}" src="{{ image_sizes.desktop_image }}" alt="{{ get_image(image).alt ?: get_image(image).file }}" {{ no_lazy ? '' : 'loading="lazy"' }}>
+	<source srcset="{{ mobile_image }}" media="(max-width: 768px)">
+	<source srcset="{{ tablet_image }}" media="(max-width: 1024px)">
+	<img class="{{class}}" src="{{ desktop_image }}" alt="{{ Image(image).alt ? Image(image).alt : Image(image).file }}" {{no_lazy ? '' : 'loading="lazy"'}}>
 </picture>
