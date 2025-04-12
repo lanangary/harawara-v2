@@ -186,6 +186,34 @@
             "return_format": "d\/m\/Y g:i a",
             "first_day": 1,
             "allow_in_bindings": 0
+        },
+        {
+            "key": "field_67fa8c48f841b",
+            "label": "icon",
+            "name": "icon",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "choices": {
+                "arrow": "Arrow",
+                "pen": "Pen"
+            },
+            "default_value": "arrow",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "min": "",

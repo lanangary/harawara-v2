@@ -122,11 +122,11 @@ define('WP_MEMORY_LIMIT', env('WP_MEMORY_LIMIT') ?? '512M');
 define('WP_DEFAULT_THEME', env('WP_THEME') ?? 'wp');
 
 if (!defined('DISALLOW_FILE_MODS')) {
-    define('DISALLOW_FILE_MODS', env('DISALLOW_FILE_MODS') ?? true);
+    define('DISALLOW_FILE_MODS', env('DISALLOW_FILE_MODS') ?? false);
 }
 
 if (!defined('DISALLOW_FILE_EDIT')) {
-    define('DISALLOW_FILE_EDIT', env('DISALLOW_FILE_EDIT') ?? true);
+    define('DISALLOW_FILE_EDIT', env('DISALLOW_FILE_EDIT') ?? false);
 }
 
 /**

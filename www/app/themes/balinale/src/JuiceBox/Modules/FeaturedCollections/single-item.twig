@@ -26,17 +26,16 @@
 
 				{% if button is not empty %}
 					{% set button = {
-						title: 'Lihat Semua',
+						title: 'Lihat Demo',
 						link: item.meta('collections_group').link
 					} %}
 				{% endif %}
 
 				<div class="featured-collections-content-item-content-button-wrapper button">
 					{% include "partials/button-arrow.twig" with {
-												button: button,
-												class: 'tblack bg-white',
-												icon: 'arrow'
-											} %}
+						button: button,
+						class: 'tblack bg-dark rounded'
+					} %}
 				</div>
 			</div>
 		</div>

@@ -195,59 +195,6 @@ a {
     text-decoration: none !important;
 }
 
-.button {
-    .btn {
-        font-family: 'Quicksand';
-        display: flex;
-        align-items: center;
-        width: max-content;
-        padding: 8px 24px;
-        font-size: 20px;
-        text-decoration: none !important;
-        gap: 10px;
-
-        &.tblack {
-            color: black;
-        }
-
-        &.bg-white {
-            background-color: $hrw-white;
-            color: $hrw-dark;
-
-            svg {
-                path {
-                    stroke: $hrw-dark;
-                    fill: $hrw-dark;
-                }
-            }
-        }
-
-        &.bg-dark {
-            background-color: $hrw-dark;
-            color: $hrw-white;
-
-            svg {
-                path {
-                    stroke: $hrw-white;
-                    fill: $hrw-white;
-                }
-            }
-        }
-
-        .pen {
-            svg {
-                width: 25px;
-            }
-        }
-
-        .arrow {
-            svg {
-                width: 20px;
-            }
-        }
-    }
-}
-
 @include mq($until: lg) {
     .module {
         &.padding-large {
