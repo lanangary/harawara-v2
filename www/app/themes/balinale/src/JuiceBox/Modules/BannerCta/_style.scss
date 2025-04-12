@@ -1,4 +1,11 @@
 .banner-cta {
+    position: relative;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
     &-wrap {
         display: flex;
         gap: clamp(30px, calc(60 * 100vw / 1440), 60px);
@@ -12,10 +19,52 @@
 
     &.cta-contain {
         .banner-cta {
+            &-background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                padding: 45px 0px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 45px;
+                    left: 0;
+                    height: calc(100% - 90px);
+                    width: 100%;
+                    background: $hrw-dark;
+                    opacity: 0.4;
+                    z-index: 1;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
             &-wrap {
                 padding: 40px 80px;
                 padding: 40px clamp(20px, calc(80 * 100vw / 1440), 80px);
                 background: $hrw-dark;
+
+                &.isimage {
+                    background: transparent;
+                    padding: 60px 0px;
+                    justify-content: space-between;
+                    .banner-cta {
+                        &-content {
+                            width: 50%;
+
+                            @include mq($until: md) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
             }
             &-content {
                 display: flex;

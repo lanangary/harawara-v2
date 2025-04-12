@@ -1,11 +1,14 @@
 {% set padding = 'contain' %}
+{% set isimage = false %}
 {% if module.padding == 'full' %}
-	{% set padding = 'full' %}
+	{% set isimage = true %}
 {% endif %}
 
-<div class="module padding-fluid banner-cta cta-{{padding}}">
+<div class="module padding-fluid banner-cta cta-{{padding}} ">
+
+
 	<div class="container container-{{padding}}">
-		<div class="banner-cta-wrap">
+		<div class="banner-cta-wrap {{isimage ? 'isimage' : ''}}">
 			<div class="banner-cta-content">
 				<div class="banner-cta-content-title league-spartan mh62 twhite transform-none">
 					{{ module.title }}
@@ -29,4 +32,12 @@
 			</div>
 		</div>
 	</div>
+
+	{% if isimage %}
+		<div class="banner-cta-background">
+			{% include "partials/image.twig" with {
+            image: module.background
+        } %}
+		</div>
+	{% endif %}
 </div>
