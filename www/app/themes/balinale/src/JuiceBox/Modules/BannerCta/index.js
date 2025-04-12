@@ -58,19 +58,20 @@ class BannerCta {
                     '[data-set="hours"] .banner-cta-timer-set-number-value:nth-child(2)'
                 ).textContent = hours % 10;
 
-                timerElement.querySelector(
-                    '[data-set="minutes"] .banner-cta-timer-set-number-value:nth-child(1)'
-                ).textContent = Math.floor(minutes / 10);
-                timerElement.querySelector(
-                    '[data-set="minutes"] .banner-cta-timer-set-number-value:nth-child(2)'
-                ).textContent = minutes % 10;
+                // minutes and second
+                // timerElement.querySelector(
+                //     '[data-set="minutes"] .banner-cta-timer-set-number-value:nth-child(1)'
+                // ).textContent = Math.floor(minutes / 10);
+                // timerElement.querySelector(
+                //     '[data-set="minutes"] .banner-cta-timer-set-number-value:nth-child(2)'
+                // ).textContent = minutes % 10;
 
-                timerElement.querySelector(
-                    '[data-set="seconds"] .banner-cta-timer-set-number-value:nth-child(1)'
-                ).textContent = Math.floor(seconds / 10);
-                timerElement.querySelector(
-                    '[data-set="seconds"] .banner-cta-timer-set-number-value:nth-child(2)'
-                ).textContent = seconds % 10;
+                // timerElement.querySelector(
+                //     '[data-set="seconds"] .banner-cta-timer-set-number-value:nth-child(1)'
+                // ).textContent = Math.floor(seconds / 10);
+                // timerElement.querySelector(
+                //     '[data-set="seconds"] .banner-cta-timer-set-number-value:nth-child(2)'
+                // ).textContent = seconds % 10;
             };
 
             updateTimer();

@@ -1,2 +1,41 @@
-<div class="module padding-fluid">
+<div class="module padding-fluid faq">
+
+	<div class="container">
+
+		<div class="faq-wrap">
+
+			<div class="faq-heading">
+				<div class="faq-heading-title league-spartan mh62">
+					{{module.title}}
+				</div>
+				<div class="faq-heading-description quicksand t24">
+					{{module.description}}
+				</div>
+			</div>
+			<div class="faq-content">
+				<div class="faq-content-wrap">
+					{% for item in module.faq_item %}
+						<div class="faq-content-wrap-item">
+							<div class="faq-content-wrap-item-title quicksand t24">
+								<span>
+									{{item.title}}
+								</span>
+								<span>
+									{% include "partials/arrow-icon.twig" %}
+								</span>
+
+							</div>
+							<div class="faq-content-wrap-item-content quicksand t20">
+								<div class="faq-content-wrap-item-content-wrap">
+									{{item.content}}
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+
 </div>

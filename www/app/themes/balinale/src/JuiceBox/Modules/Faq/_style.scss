@@ -1,0 +1,40 @@
+.faq {
+    &-heading {
+        &-description {
+            margin: 25px 0px 45px 0px;
+        }
+    }
+
+    &-content {
+        &-wrap {
+            &-item {
+                &.open {
+                    .icon {
+                        svg {
+                            rotate: -90deg;
+                        }
+                    }
+                }
+
+                &-title {
+                    padding: 10px 20px;
+                    border: solid 2px black;
+                    border-radius: 10px;
+                    margin: clamp(0px, calc(14 * 100vw / 1440), 14px) 0px;
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    .icon {
+                        svg {
+                            width: 25px;
+                            height: 25px;
+                            rotate: 90deg;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

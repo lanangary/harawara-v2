@@ -14,3 +14,5 @@ import 'JBComponent/Searchbox';
 import 'JBComponent/PageReader';
 
 import 'JBModule/BannerCta';
+
+import 'JBModule/Faq';
