@@ -37,8 +37,9 @@
         display: flex;
         align-items: center;
         width: max-content;
-        padding: 8px 24px;
-        font-size: 20px;
+        padding: clamp(4px, calc(8 * 100vw / 1440), 8px)
+            clamp(16px, calc(24 * 100vw / 1440), 24px);
+        font-size: clamp(16px, calc(20 * 100vw / 1440), 20px);
         text-decoration: none !important;
         gap: 10px;
 
@@ -72,13 +73,13 @@
 
         .pen {
             svg {
-                width: 25px;
+                width: clamp(20px, calc(25 * 100vw / 1440), 25px);
             }
         }
 
         .arrow {
             svg {
-                width: 20px;
+                width: clamp(15px, calc(20 * 100vw / 1440), 20px);
             }
         }
 

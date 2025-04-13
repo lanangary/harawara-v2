@@ -25,6 +25,10 @@
                     display: flex;
                     justify-content: space-between;
 
+                    @include mq($until: md) {
+                        border: solid 1px black;
+                    }
+
                     .icon {
                         svg {
                             width: 25px;

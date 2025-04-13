@@ -82,3 +82,37 @@
         }
     }
 }
+
+.footer {
+    padding: 45px 0px;
+    background-color: $hrw-dark;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        @include mq($until: md) {
+            flex-direction: column;
+            gap: 20px;
+            .footer__menu-wrapper {
+                padding: unset;
+            }
+        }
+    }
+
+    &-section {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        row-gap: 15px;
+
+        &__li {
+            width: calc(50% - 30px);
+        }
+    }
+}

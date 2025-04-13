@@ -132,13 +132,13 @@
     &__li {
         position: relative;
 
-        &+.nav__li {
+        & + .nav__li {
             @include mq($until: sm) {
                 border-top: 1px solid $brand-primary;
             }
         }
 
-        &--submenu-open>.nav__toggle {
+        &--submenu-open > .nav__toggle {
             @include mq($until: sm) {
                 i {
                     transform: rotate(90deg);
@@ -148,14 +148,14 @@
 
         @include mq(sm) {
             @include on-event() {
-                >.nav__submenu {
+                > .nav__submenu {
                     opacity: 1;
                     pointer-events: auto;
                     z-index: 998;
                     transition: all 0s 0s, opacity $transition-fast;
                 }
 
-                >.nav__a .nav__a__title {
+                > .nav__a .nav__a__title {
                     .nav__submenu & {
                         transform: translateX(10px);
                     }
@@ -237,7 +237,7 @@
             transition: all 0s $transition-speed-fast, opacity $transition-fast;
         }
 
-        .nav__li+.nav__li {
+        .nav__li + .nav__li {
             @include mq($until: sm) {
                 border-top: 1px solid rgba($white, 0.8);
             }
@@ -329,7 +329,7 @@
     .container {
         width: 100%;
         margin: auto;
-        max-width: 1311px;
+        max-width: 1200px;
         margin-right: 64px;
         padding: unset;
         margin-left: 64px;
@@ -428,10 +428,9 @@
             }
         }
     }
-
 }
 
-@include mq($until : 1440px) {
+@include mq($until: 1440px) {
     .header {
         .container {
             padding-left: 18px;
