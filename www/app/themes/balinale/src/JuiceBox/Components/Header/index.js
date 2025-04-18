@@ -37,7 +37,7 @@ jQuery($ => {
      */
     const $keyboardNavs = $('.keyboard-nav a');
 
-    $keyboardNavs.on('click', function (e) {
+    $keyboardNavs.on('click', function(e) {
         e.preventDefault();
         const hash = $(e.target).attr('href');
         const $speed = $(e.target).data('speed') ? $(e.target).data('speed') : 800;
@@ -46,26 +46,29 @@ jQuery($ => {
     });
 
     let mainHeader = document.querySelector('#main-header');
-
+    console.log('mainHeader', mainHeader);
     // add scroll class to header when scrolling up and remove when scrolling down and at top add top class
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        let currentScroll = window.scrollY;
 
-        if (currentScroll > lastScroll) {
-            mainHeader.classList.add('scroll');
-        } else {
-            mainHeader.classList.remove('scroll');
-        }
+    if (mainHeader) {
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            let currentScroll = window.scrollY;
 
-        if (currentScroll === 0) {
-            mainHeader.classList.add('top');
-        } else {
-            mainHeader.classList.remove('top');
-        }
+            if (currentScroll > lastScroll) {
+                mainHeader.classList.add('scroll');
+            } else {
+                mainHeader.classList.remove('scroll');
+            }
 
-        lastScroll = currentScroll;
-    });
+            if (currentScroll === 0) {
+                mainHeader.classList.add('top');
+            } else {
+                mainHeader.classList.remove('top');
+            }
+
+            lastScroll = currentScroll;
+        });
+    }
 
     // header slide js
 });

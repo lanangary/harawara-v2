@@ -22,6 +22,7 @@
         "wpackagist-plugin/wp-security-audit-log": "*",
         "wpackagist-plugin/enable-jquery-migrate-helper": "*",
         "wpackagist-plugin/wp-crontrol": "*",
+        "wpackagist-plugin/elementor": "*",
         "larapack/dd": "^1.1",
         "rappasoft/laravel-helpers": "^1.0",
         "wpackagist-plugin/wp-mail-smtp": "*",
