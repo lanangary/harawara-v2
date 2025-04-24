@@ -317,11 +317,22 @@
     }
 
     &.top {
+        background-color: #fffff9;
+        box-shadow: 0 3px 25px 2px rgba(0, 0, 0, 0.1);
+
+        .header-wrap-item-logo {
+            a {
+                color: #2e2e2e;
+            }
+        }
+    }
+
+    .home &.top {
         background-color: transparent;
 
         .header-wrap-item-logo {
             a {
-                color: #fffff9;
+                color: #fffff9 !important;
             }
         }
     }

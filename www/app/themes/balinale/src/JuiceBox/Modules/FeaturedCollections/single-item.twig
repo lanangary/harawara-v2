@@ -27,7 +27,7 @@
 				{% if button is not empty %}
 					{% set button = {
 						title: 'Lihat Demo',
-						link: item.meta('collections_group').link
+						url: item.meta('collections_group').link.url
 					} %}
 				{% endif %}
 
