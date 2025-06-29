@@ -1,5 +1,5 @@
 {
-    "name": "balinale",
+    "name": "harawara",
     "version": "1.0.0",
     "author": "Juicebox <web@juicebox.com.au>",
     "scripts": {
@@ -41,7 +41,6 @@
         "gsap": "^2.0.0",
         "hoverintent": "^2.0.0",
         "imagesloaded": "^4.1.4",
-        "swiper": "^11.2.6",
         "what-input": "^5.1.0"
     }
 }

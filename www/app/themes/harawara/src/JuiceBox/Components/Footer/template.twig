@@ -1,0 +1,31 @@
+{% if footer_type != 'no-footer' %}
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrap">
+				<div class="footer-section">
+					<div class="footer-section-logo">
+						<a href="{{ site.url }}" class="text-hide block header__logo nimbus twhite">
+							HARAWARA
+						</a>
+					</div>
+				</div>
+
+				<div class="footer-section">
+					<div class="footer-section-menu">
+						<nav class="col xs-12 sm-8 sm-2 footer__menu-wrapper" aria-label="Legal navigation">
+							<ul class="footer__menu quicksand">
+								{% for item in theme_menus.legal_menu.items %}
+									<li class="footer__menu__li">
+										<a href="{{ item.link }}" class="small footer__menu__link">{{ item.title }}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+{% endif %}

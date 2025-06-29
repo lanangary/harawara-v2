@@ -1,4 +1,4 @@
-# WordPress by Juicebox
+# WordPress by Badrock
 
 This build is loosely based on the [Roots.io Bedrock](https://roots.io/bedrock/) framework, boasts an enhanced folder structure that protects sensitive files from the web root and features a renamed `app` folder for improved content representation. Public files are stored in the `www` directory.
 
@@ -17,7 +17,7 @@ Composer manages dependencies, while environment-specific files and Dotenv simpl
 1. Clone the repository (replace domain.com with the repository name):
 
 ```
-git clone git@bitbucket.org:JuiceBoxCreative/domain.com.git domain
+git clone git@bitbucket.org:BadrockCreative/domain.com.git domain
 cd domain
 ```
 
@@ -91,18 +91,18 @@ When pull requests are merged from the `develop` or `master` branches, the code 
 
 For any issues, please refer to additional documentation:
 
--   [Juicbox Documentation](https://app.nuclino.com/Juicebox-Creative/7-Technology/WordPress-502ce3e7-7f16-4366-b190-83f19f069406)
+-   [Juicbox Documentation](https://app.nuclino.com/Badrock-Creative/7-Technology/WordPress-502ce3e7-7f16-4366-b190-83f19f069406)
 -   [Bedrock Documentation](https://roots.io/bedrock/)
 -   [Timber V1 Documentation](https://timber.github.io/docs/)
 -   [Twig Documentation](https://twig.symfony.com/)
 
-If you still need help, feel free to ask for help by emailing support@juicebox.com.au.
+If you still need help, feel free to ask for help by emailing support@Badrock.com.au.
 
 ## License
 
 This project is open-source and licensed under the MIT License.
 
-Copyright 2023 Juicebox
+Copyright 2023 Badrock
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

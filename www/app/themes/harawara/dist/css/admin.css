@@ -1,0 +1,44 @@
+/*
+Colours
+The $colors map will generate a list of helper classes
+you can use for setting background and colour, eg.
+.white { color : $white }
+.bg-white { background-color : $white }
+*/
+/*
+Transitions
+*/
+/*
+Type
+These values will be used to generate fluid type classes
+*/
+/*
+Heading sizes
+*/
+/*
+Body Sizes
+*/
+/*
+Base Padding
+The base unit for this site's spacing, will be used
+to generate the grid classes as well ass your padding helper classes
+*/
+/**
+ * Header Height
+ */
+.wpadmin-env {
+  pointer-events: none;
+  background: #dc3545 !important;
+}
+.wpadmin-env--production {
+  background: #28a745 !important;
+}
+.wpadmin-env--staging {
+  background: #ffc107 !important;
+}
+.wpadmin-env__dashicon {
+  font-family: "dashicons" !important;
+  display: inline-block !important;
+  margin-right: 5px !important;
+  font-size: 16px !important;
+}

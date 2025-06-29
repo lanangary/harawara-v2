@@ -1,0 +1,13 @@
+{% set head_type = 'no-head' %}
+{% set footer_type = 'no-footer' %}
+{% extends 'base.twig' %}
+
+{% block main %}
+	<div class="nivala-section">
+		<h1>{{post.meta('banner').title}}</h1>
+	</div>
+{% endblock %}
+
+{# {% block afterMain %}
+	{% include 'partials/modules.twig' %}
+{% endblock %} #}

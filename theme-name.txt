@@ -1,1 +1,4 @@
 balinale
+
+this for update the theme name and all its refference
+php scripts/setup-theme.php
