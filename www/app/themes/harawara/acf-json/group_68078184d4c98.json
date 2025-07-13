@@ -88,7 +88,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page--nivala.php"
+                "value": "page--register.php"
             }
         ]
     ],
@@ -101,5 +101,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745323656
+    "modified": 1751208954
 }
