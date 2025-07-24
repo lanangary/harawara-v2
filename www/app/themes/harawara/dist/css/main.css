@@ -5648,6 +5648,169 @@ body.search-active {
      object-position: center;
 }
 
-.nivala-section {
-  background-color: red;
+.register-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.register-section .register-form {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.register-section .register-form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.register-section .register-form .alert {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+}
+.register-section .register-form .alert.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+.register-section .register-form .alert.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+.register-section .register-form .form-group {
+  margin-bottom: 20px;
+}
+.register-section .register-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+.register-section .register-form .form-group .form-control, .register-section .register-form .form-group.name input,
+.register-section .register-form .form-group.time input,
+.register-section .register-form .form-group.time select,
+.register-section .register-form .form-group.address input,
+.register-section .register-form .form-group.address select, .register-section .register-form .form-group .ginput_container_list .gfield_list_cell input, .ginput_container_list .gfield_list_cell .register-section .register-form .form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 5px;
+  font-size: 16px;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+.register-section .register-form .form-group .form-control:focus, .register-section .register-form .form-group.name input:focus,
+.register-section .register-form .form-group.time input:focus,
+.register-section .register-form .form-group.time select:focus,
+.register-section .register-form .form-group.address input:focus,
+.register-section .register-form .form-group.address select:focus, .register-section .register-form .form-group .ginput_container_list .gfield_list_cell input:focus, .ginput_container_list .gfield_list_cell .register-section .register-form .form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+          box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+.register-section .register-form .form-group .form-control.error, .register-section .register-form .form-group.name input.error,
+.register-section .register-form .form-group.time input.error,
+.register-section .register-form .form-group.time select.error,
+.register-section .register-form .form-group.address input.error,
+.register-section .register-form .form-group.address select.error, .register-section .register-form .form-group .ginput_container_list .gfield_list_cell input.error, .ginput_container_list .gfield_list_cell .register-section .register-form .form-group input.error {
+  border-color: #dc3545;
+  -webkit-box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+          box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+.register-section .register-form .form-group .form-text {
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: 5px;
+}
+.register-section .register-form .form-group .field-error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.register-section .register-form .btn, .register-section .register-form .gform_button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.register-section .register-form .btn.btn-primary, .register-section .register-form .btn-primary.gform_button {
+  background-color: #007bff;
+  color: white;
+}
+.register-section .register-form .btn.btn-primary:hover, .register-section .register-form .btn-primary.gform_button:hover {
+  background-color: #0056b3;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+          box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+.register-section .register-form .btn.btn-primary:active, .register-section .register-form .btn-primary.gform_button:active, .register-section .register-form .btn.btn-primary.nice-select.open, .register-section .register-form .btn-primary.gform_button.nice-select.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.register-section .register-form .btn.btn-primary:disabled, .register-section .register-form .btn-primary.gform_button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.register-section .register-form .login-link {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e5e9;
+}
+.register-section .register-form .login-link p {
+  margin: 0;
+  color: #6c757d;
+}
+.register-section .register-form .login-link p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.register-section .register-form .login-link p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .register-section {
+    padding: 20px 0;
+  }
+  .register-section .register-form {
+    margin: 0 15px;
+    padding: 30px 20px;
+  }
+  .register-section .register-form h1 {
+    font-size: 1.5rem;
+  }
+}
+.register-form.loading .btn, .register-form.loading .gform_button {
+  opacity: 0.7;
+  pointer-events: none;
 }

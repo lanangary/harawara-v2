@@ -78,6 +78,16 @@ class RegistrationForm {
                     errorMessage = 'Passwords do not match.';
                 }
                 break;
+
+            case 'phone_number':
+                if (
+                    value &&
+                    !/^[\+]?[1-9][\d]{0,15}$/.test(value.replace(/[\s\-\(\)]/g, ''))
+                ) {
+                    isValid = false;
+                    errorMessage = 'Please enter a valid phone number.';
+                }
+                break;
         }
 
         if (!isValid) {

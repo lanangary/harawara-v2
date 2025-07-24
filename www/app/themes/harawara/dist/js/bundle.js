@@ -18,19 +18,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var JBSrc_gform_spinner__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(JBSrc_gform_spinner__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var JBSrc_gtm_events__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! JBSrc/gtm-events */ "./www/app/themes/harawara/js/src/gtm-events.js");
 /* harmony import */ var JBSrc_gtm_events__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(JBSrc_gtm_events__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var JBComponent_Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! JBComponent/Header */ "./www/app/themes/harawara/src/JuiceBox/Components/Header/index.js");
-/* harmony import */ var JBComponent_Searchbox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! JBComponent/Searchbox */ "./www/app/themes/harawara/src/JuiceBox/Components/Searchbox/index.js");
-/* harmony import */ var JBComponent_PageReader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! JBComponent/PageReader */ "./www/app/themes/harawara/src/JuiceBox/Components/PageReader/index.js");
-/* harmony import */ var JBComponent_PageReader__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(JBComponent_PageReader__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var JBModule_BannerCta__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! JBModule/BannerCta */ "./www/app/themes/harawara/src/JuiceBox/Modules/BannerCta/index.js");
-/* harmony import */ var JBModule_BannerCta__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(JBModule_BannerCta__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var JBModule_Faq__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! JBModule/Faq */ "./www/app/themes/harawara/src/JuiceBox/Modules/Faq/index.js");
-/* harmony import */ var JBModule_Faq__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(JBModule_Faq__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var JBSrc_registration__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! JBSrc/registration */ "./www/app/themes/harawara/js/src/registration.js");
+/* harmony import */ var JBComponent_Header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! JBComponent/Header */ "./www/app/themes/harawara/src/JuiceBox/Components/Header/index.js");
+/* harmony import */ var JBComponent_Searchbox__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! JBComponent/Searchbox */ "./www/app/themes/harawara/src/JuiceBox/Components/Searchbox/index.js");
+/* harmony import */ var JBComponent_PageReader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! JBComponent/PageReader */ "./www/app/themes/harawara/src/JuiceBox/Components/PageReader/index.js");
+/* harmony import */ var JBComponent_PageReader__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(JBComponent_PageReader__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var JBModule_BannerCta__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! JBModule/BannerCta */ "./www/app/themes/harawara/src/JuiceBox/Modules/BannerCta/index.js");
+/* harmony import */ var JBModule_BannerCta__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(JBModule_BannerCta__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var JBModule_Faq__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! JBModule/Faq */ "./www/app/themes/harawara/src/JuiceBox/Modules/Faq/index.js");
+/* harmony import */ var JBModule_Faq__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(JBModule_Faq__WEBPACK_IMPORTED_MODULE_10__);
 
 
 //import './plugins/fancybox';
 //import './plugins/maps';
 //import './plugins/newsletter';
+
 
 
 
@@ -762,6 +764,220 @@ jQuery(function ($) {
     setTimeout(JBInView.init, 500);
   }
 });
+
+/***/ }),
+
+/***/ "./www/app/themes/harawara/js/src/registration.js":
+/*!********************************************************!*\
+  !*** ./www/app/themes/harawara/js/src/registration.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _typeof(o) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, _typeof(o);
+}
+function _classCallCheck(a, n) {
+  if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties(e, r) {
+  for (var t = 0; t < r.length; t++) {
+    var o = r[t];
+    o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o);
+  }
+}
+function _createClass(e, r, t) {
+  return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", {
+    writable: !1
+  }), e;
+}
+function _toPropertyKey(t) {
+  var i = _toPrimitive(t, "string");
+  return "symbol" == _typeof(i) ? i : i + "";
+}
+function _toPrimitive(t, r) {
+  if ("object" != _typeof(t) || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r || "default");
+    if ("object" != _typeof(i)) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+/**
+ * Registration Form Validation and UX
+ */
+var RegistrationForm = /*#__PURE__*/function () {
+  function RegistrationForm() {
+    _classCallCheck(this, RegistrationForm);
+    this.form = document.querySelector('.registration-form');
+    if (!this.form) return;
+    this.init();
+  }
+  return _createClass(RegistrationForm, [{
+    key: "init",
+    value: function init() {
+      this.bindEvents();
+      this.setupPasswordValidation();
+    }
+  }, {
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+      this.form.addEventListener('submit', this.handleSubmit.bind(this));
+
+      // Real-time validation
+      var inputs = this.form.querySelectorAll('input[required]');
+      inputs.forEach(function (input) {
+        input.addEventListener('blur', _this.validateField.bind(_this, input));
+        input.addEventListener('input', _this.clearFieldError.bind(_this, input));
+      });
+    }
+  }, {
+    key: "setupPasswordValidation",
+    value: function setupPasswordValidation() {
+      var _this2 = this;
+      var password = this.form.querySelector('#password');
+      var confirmPassword = this.form.querySelector('#confirm_password');
+      if (password && confirmPassword) {
+        confirmPassword.addEventListener('input', function () {
+          _this2.validatePasswordMatch(password, confirmPassword);
+        });
+      }
+    }
+  }, {
+    key: "validateField",
+    value: function validateField(field) {
+      var value = field.value.trim();
+      var isValid = true;
+      var errorMessage = '';
+
+      // Remove existing error styling
+      this.clearFieldError(field);
+
+      // Field-specific validation
+      switch (field.name) {
+        case 'username':
+          if (value.length < 3) {
+            isValid = false;
+            errorMessage = 'Username must be at least 3 characters long.';
+          } else if (!/^[a-zA-Z0-9_-]+$/.test(value)) {
+            isValid = false;
+            errorMessage = 'Username can only contain letters, numbers, underscores, and hyphens.';
+          }
+          break;
+        case 'email':
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+            isValid = false;
+            errorMessage = 'Please enter a valid email address.';
+          }
+          break;
+        case 'password':
+          if (value.length < 8) {
+            isValid = false;
+            errorMessage = 'Password must be at least 8 characters long.';
+          }
+          break;
+        case 'confirm_password':
+          var password = this.form.querySelector('#password').value;
+          if (value !== password) {
+            isValid = false;
+            errorMessage = 'Passwords do not match.';
+          }
+          break;
+      }
+      if (!isValid) {
+        this.showFieldError(field, errorMessage);
+      }
+      return isValid;
+    }
+  }, {
+    key: "validatePasswordMatch",
+    value: function validatePasswordMatch(password, confirmPassword) {
+      if (confirmPassword.value && password.value !== confirmPassword.value) {
+        this.showFieldError(confirmPassword, 'Passwords do not match.');
+        return false;
+      } else {
+        this.clearFieldError(confirmPassword);
+        return true;
+      }
+    }
+  }, {
+    key: "showFieldError",
+    value: function showFieldError(field, message) {
+      field.classList.add('error');
+
+      // Remove existing error message
+      var existingError = field.parentNode.querySelector('.field-error');
+      if (existingError) {
+        existingError.remove();
+      }
+
+      // Add new error message
+      var errorDiv = document.createElement('div');
+      errorDiv.className = 'field-error';
+      errorDiv.style.cssText = 'color: #dc3545; font-size: 14px; margin-top: 5px;';
+      errorDiv.textContent = message;
+      field.parentNode.appendChild(errorDiv);
+    }
+  }, {
+    key: "clearFieldError",
+    value: function clearFieldError(field) {
+      field.classList.remove('error');
+      var errorDiv = field.parentNode.querySelector('.field-error');
+      if (errorDiv) {
+        errorDiv.remove();
+      }
+    }
+  }, {
+    key: "validateForm",
+    value: function validateForm() {
+      var _this3 = this;
+      var requiredFields = this.form.querySelectorAll('input[required]');
+      var isValid = true;
+      requiredFields.forEach(function (field) {
+        if (!_this3.validateField(field)) {
+          isValid = false;
+        }
+      });
+      return isValid;
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      if (!this.validateForm()) {
+        e.preventDefault();
+        return false;
+      }
+
+      // Show loading state
+      this.showLoadingState();
+    }
+  }, {
+    key: "showLoadingState",
+    value: function showLoadingState() {
+      this.form.classList.add('loading');
+      var submitBtn = this.form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.textContent = 'Creating Account...';
+        submitBtn.disabled = true;
+      }
+    }
+  }]);
+}(); // Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', function () {
+  new RegistrationForm();
+});
+/* harmony default export */ __webpack_exports__["default"] = (RegistrationForm);
 
 /***/ }),
 

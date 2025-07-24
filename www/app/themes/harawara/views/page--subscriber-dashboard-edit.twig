@@ -1,0 +1,93 @@
+{% extends 'base.twig' %}
+
+{% block main %}
+	<div class="subscriber-dashboard-edit-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+					<div class="subscriber-dashboard-edit-form">
+						<h2>Edit Your Page</h2>
+						{% if edit_message %}
+							<div class="alert alert-info">{{ edit_message }}</div>
+						{% endif %}
+						<form method="post" action="">
+							<input type="hidden" name="subscriber_page_nonce" value="{{ edit_nonce }}">
+							<input type="hidden" name="subscriber_page_update" value="1">
+							<div class="form-group">
+								<label for="elementor_template_id">Choose a Template</label>
+								<select id="elementor_template_id" name="elementor_template_id" class="form-control">
+									<option value="">-- No Change --</option>
+									{% for tpl in elementor_templates %}
+										<option value="{{ tpl.ID }}" {% if tpl.ID == current_template_id %} selected {% endif %}>{{ tpl.post_title }}</option>
+									{% endfor %}
+								</select>
+								<small class="form-text text-muted">Select a template to apply its design to your page. Choosing "No Change" will keep your current design.</small>
+							</div>
+							<div class="form-group">
+								<label for="page_slug">Page URL Slug</label>
+								<div class="input-group">
+									<span class="input-group-text">{{ site.url }}/</span>
+									<input type="text" id="page_slug" name="page_slug" class="form-control" value="{{ edit_slug }}" required pattern="[a-zA-Z0-9\-]+">
+								</div>
+								<small class="form-text text-muted">Only letters, numbers, and dashes allowed. Example:
+									<code>member-john</code>
+								</small>
+							</div>
+
+							<button type="submit" class="btn btn-success">Save Changes</button>
+							<a href="{{ subscriber_page_url }}" class="btn btn-secondary ml-2" target="_blank">View Your Page</a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block afterMain %}
+	<style>
+		.subscriber-dashboard-edit-section {
+			padding: 60px 0;
+			background-color: #f8f9fa;
+		}
+		.subscriber-dashboard-edit-form {
+			background: #fff3cd;
+			border: 1px solid #ffeeba;
+			padding: 40px 30px;
+			border-radius: 10px;
+			margin-bottom: 30px;
+		}
+		.subscriber-dashboard-edit-form h2 {
+			color: #856404;
+			margin-bottom: 30px;
+		}
+		.subscriber-dashboard-edit-form .form-group {
+			margin-bottom: 20px;
+		}
+		.subscriber-dashboard-edit-form .input-group {
+			display: flex;
+			align-items: center;
+		}
+		.subscriber-dashboard-edit-form .input-group-text {
+			background: #f8f9fa;
+			border: 1px solid #ced4da;
+			border-radius: 0.25rem 0 0 0.25rem;
+			padding: 0.375rem 0.75rem;
+			color: #495057;
+		}
+		.subscriber-dashboard-edit-form input[type="text"],
+		.subscriber-dashboard-edit-form textarea,
+		.subscriber-dashboard-edit-form select {
+			width: 100%;
+			border: 1px solid #ced4da;
+			border-radius: 0.25rem;
+			padding: 0.375rem 0.75rem;
+		}
+		.subscriber-dashboard-edit-form button {
+			margin-top: 10px;
+		}
+		.subscriber-dashboard-edit-form .btn-secondary {
+			margin-left: 10px;
+		}
+	</style>
+{% endblock %}

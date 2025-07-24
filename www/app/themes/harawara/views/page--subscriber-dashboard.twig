@@ -1,0 +1,204 @@
+{% extends 'base.twig' %}
+
+{% block main %}
+	<div class="subscriber-dashboard-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="subscriber-dashboard-content">
+						{{ dashboard_content|raw }}
+
+						<div class="subscriber-actions">
+							<h3>Quick Actions</h3>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="action-card">
+										<h4>Update Profile</h4>
+										<p>Update your personal information and preferences</p>
+										<a href="{{ site.url }}/wp-admin/profile.php" class="btn btn-primary">Edit Profile</a>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="action-card">
+										<h4>Edit Your Page</h4>
+										<p>Customize your personal page content</p>
+										<a href="/template-editor/" class="btn btn-success">Edit Your Page</a>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="action-card">
+										<h4>View Your Page</h4>
+										<p>See your public page as others see it</p>
+										<a href="{{ subscriber_page_url }}" class="btn btn-info" target="_blank">View Your Page</a>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="action-card">
+										<h4>View Orders</h4>
+										<p>Check your order history and status</p>
+										<a href="#" class="btn btn-secondary">View Orders</a>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="action-card">
+										<h4>Contact Support</h4>
+										<p>Get help from our customer support team</p>
+										<a href="{{ site.url }}/contact" class="btn btn-outline-primary">Contact Us</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="subscriber-recent-activity">
+							<h3>Recent Activity</h3>
+							<div class="activity-list">
+								<div class="activity-item">
+									<span class="activity-date">{{ "now"|date("M j, Y") }}</span>
+									<span class="activity-text">Welcome to your subscriber dashboard!</span>
+								</div>
+								<!-- Add more activity items here -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block afterMain %}
+	<style>
+		.subscriber-dashboard-section {
+			padding: 60px 0;
+			background-color: #f8f9fa;
+		}
+
+		.subscriber-dashboard-content {
+			background: white;
+			padding: 40px;
+			border-radius: 10px;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.subscriber-dashboard h2 {
+			color: #333;
+			margin-bottom: 30px;
+			border-bottom: 2px solid #007cba;
+			padding-bottom: 10px;
+		}
+
+		.user-info {
+			background: #f8f9fa;
+			padding: 20px;
+			border-radius: 5px;
+			margin-bottom: 30px;
+		}
+
+		.user-info p {
+			margin-bottom: 10px;
+		}
+
+		.subscriber-features {
+			margin-bottom: 40px;
+		}
+
+		.subscriber-features h3 {
+			color: #007cba;
+			margin-bottom: 15px;
+		}
+
+		.subscriber-features ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		.subscriber-features li {
+			padding: 8px 0;
+			border-bottom: 1px solid #eee;
+		}
+
+		.subscriber-features li:before {
+			content: "✓";
+			color: #28a745;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+
+		.subscriber-actions {
+			margin-bottom: 40px;
+		}
+
+		.subscriber-actions h3 {
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		.action-card {
+			background: #f8f9fa;
+			padding: 20px;
+			border-radius: 5px;
+			text-align: center;
+			height: 100%;
+			border: 1px solid #dee2e6;
+		}
+
+		.action-card h4 {
+			color: #007cba;
+			margin-bottom: 10px;
+		}
+
+		.action-card p {
+			margin-bottom: 15px;
+			color: #666;
+		}
+
+		.subscriber-recent-activity {
+			border-top: 1px solid #dee2e6;
+			padding-top: 30px;
+		}
+
+		.subscriber-recent-activity h3 {
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		.activity-item {
+			padding: 10px 0;
+			border-bottom: 1px solid #eee;
+		}
+
+		.activity-date {
+			color: #666;
+			font-size: 0.9em;
+			margin-right: 10px;
+		}
+
+		.activity-text {
+			color: #333;
+		}
+
+		.subscriber-page-info {
+			background: #e3f2fd;
+			padding: 20px;
+			border-radius: 5px;
+			margin-bottom: 30px;
+			border-left: 4px solid #007cba;
+		}
+
+		.subscriber-page-info h3 {
+			color: #007cba;
+			margin-bottom: 15px;
+		}
+
+		.page-actions {
+			margin-top: 15px;
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+		}
+
+		.page-actions .btn {
+			margin-bottom: 5px;
+		}
+	</style>
+{% endblock %}

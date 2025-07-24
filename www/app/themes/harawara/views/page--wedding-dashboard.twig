@@ -1,0 +1,70 @@
+{# {% set head_type = 'no-head' %}
+{% set footer_type = 'no-footer' %} #}
+{% extends 'base.twig' %}
+
+{% block main %}
+
+	<div class="wedding-dashboard">
+		<div class="wedding-dashboard-col">
+			<div class="wedding-dashboard-form">
+				<div class="wedding-dashboard-form-header">
+					<h1>{{ post.title }}</h1>
+				</div>
+				<div class="wedding-dashboard-form-content">
+					<form method="post" action="" class="registration-form">
+						<input type="hidden" name="registration_nonce" value="{{ registration_nonce }}">
+						<input type="hidden" name="register_user" value="1">
+
+						<div class="form-group">
+							<label for="username">Username *</label>
+							<input type="text" id="username" name="username" class="form-control" value="{{ old_username }}" required>
+						</div>
+
+						<div class="form-group">
+							<label for="email">Email Address *</label>
+							<input type="email" id="email" name="email" class="form-control" value="{{ old_email }}" required>
+						</div>
+
+						<div class="form-group">
+							<label for="password">Password *</label>
+							<input type="password" id="password" name="password" class="form-control" required>
+							<small class="form-text text-muted">Password must be at least 8 characters long.</small>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm_password">Confirm Password *</label>
+							<input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
+						</div>
+
+						<div class="form-group">
+							<label for="first_name">First Name</label>
+							<input type="text" id="first_name" name="first_name" class="form-control" value="{{ old_first_name }}">
+						</div>
+
+						<div class="form-group">
+							<label for="last_name">Last Name</label>
+							<input type="text" id="last_name" name="last_name" class="form-control" value="{{ old_last_name }}">
+						</div>
+
+						<div class="form-group">
+							<label for="phone_number">Phone Number</label>
+							<input type="tel" id="phone_number" name="phone_number" class="form-control" value="{{ old_phone_number }}">
+							<small class="form-text text-muted">Enter your phone number (optional)</small>
+						</div>
+
+						<button type="submit" class="btn btn-primary">Register Account</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="wedding-dashboard-col">
+			<div class="wedding-dashboard-viewer"></div>
+		</div>
+	</div>
+
+
+{% endblock %}
+
+{# {% block afterMain %}
+	{% include 'partials/modules.twig' %}
+{% endblock %} #}

@@ -1,10 +1,9 @@
 <?php
+
 /**
  *  Template Name:  Register
  */
 
-// Debug: Confirm this template is loaded
-error_log('Register template loaded for URL: ' . $_SERVER['REQUEST_URI']);
 
 // Basic debugging - check if form is submitted
 if ($_POST) {
@@ -12,7 +11,8 @@ if ($_POST) {
 }
 
 // Handle user registration
-function handle_user_registration() {
+function handle_user_registration()
+{
     // Debug: Check if form is submitted
     if (!isset($_POST['register_user'])) {
         error_log('No register_user in POST data');
@@ -51,6 +51,7 @@ function handle_user_registration() {
     $confirm_password = $_POST['confirm_password'];
     $first_name = sanitize_text_field($_POST['first_name']);
     $last_name = sanitize_text_field($_POST['last_name']);
+    $phone_number = sanitize_text_field($_POST['phone_number'] ?? '');
 
     error_log("Processing registration for username: $username, email: $email");
 
@@ -86,30 +87,9 @@ function handle_user_registration() {
     // If no errors, create the user
     if (empty($errors)) {
         error_log('No validation errors, creating user...');
-        
-        // Create custom role if it doesn't exist
-        if (!get_role('page_editor')) {
-            error_log('Creating page_editor role...');
-            add_role('page_editor', 'Page Editor', [
-                'read' => true,
-                'edit_posts' => false,
-                'delete_posts' => false,
-                'publish_posts' => false,
-                'edit_pages' => true,
-                'delete_pages' => false,
-                'publish_pages' => false,
-                'edit_others_pages' => false,
-                'delete_others_pages' => false,
-                'edit_private_pages' => false,
-                'delete_private_pages' => false,
-                'edit_published_pages' => true,
-                'delete_published_pages' => false,
-                'upload_files' => true,
-            ]);
-            error_log('page_editor role created');
-        } else {
-            error_log('page_editor role already exists');
-        }
+
+        // Ensure subscriber role exists (it's a default WordPress role)
+        error_log('Using default subscriber role');
 
         // Create the user
         error_log('Calling wp_create_user...');
@@ -117,7 +97,7 @@ function handle_user_registration() {
 
         if (!is_wp_error($user_id)) {
             error_log("User created successfully with ID: $user_id");
-            
+
             // Update user meta
             error_log('Updating user meta...');
             wp_update_user([
@@ -127,10 +107,16 @@ function handle_user_registration() {
                 'display_name' => $first_name . ' ' . $last_name
             ]);
 
-            // Assign the custom role
-            error_log('Assigning page_editor role...');
+            // Save phone number if provided
+            if (!empty($phone_number)) {
+                update_user_meta($user_id, 'phone_number', $phone_number);
+                error_log("Phone number saved for user $user_id: $phone_number");
+            }
+
+            // Assign the subscriber role
+            error_log('Assigning subscriber role...');
             $user = new WP_User($user_id);
-            $user->set_role('page_editor');
+            $user->set_role('subscriber');
 
             // Auto-login the user
             error_log('Setting current user and auth cookie...');
@@ -157,7 +143,8 @@ function handle_user_registration() {
             'username' => $username,
             'email' => $email,
             'first_name' => $first_name,
-            'last_name' => $last_name
+            'last_name' => $last_name,
+            'phone_number' => $phone_number
         ]
     ];
 }
@@ -178,6 +165,7 @@ if ($registration_result) {
     $context['old_email'] = $registration_result['old_data']['email'] ?? '';
     $context['old_first_name'] = $registration_result['old_data']['first_name'] ?? '';
     $context['old_last_name'] = $registration_result['old_data']['last_name'] ?? '';
+    $context['old_phone_number'] = $registration_result['old_data']['phone_number'] ?? '';
 }
 
 // Generate nonce for the form
