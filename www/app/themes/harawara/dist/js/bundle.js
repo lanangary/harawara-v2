@@ -894,6 +894,12 @@ var RegistrationForm = /*#__PURE__*/function () {
             errorMessage = 'Passwords do not match.';
           }
           break;
+        case 'phone_number':
+          if (value && !/^[\+]?[1-9][\d]{0,15}$/.test(value.replace(/[\s\-\(\)]/g, ''))) {
+            isValid = false;
+            errorMessage = 'Please enter a valid phone number.';
+          }
+          break;
       }
       if (!isValid) {
         this.showFieldError(field, errorMessage);
@@ -1072,10 +1078,11 @@ jQuery(function ($) {
     window.scrollAnchorTo(hash, $speed);
   });
   var mainHeader = document.querySelector('#main-header');
-  console.log('mainHeader', mainHeader);
+
   // add scroll class to header when scrolling up and remove when scrolling down and at top add top class
 
   if (mainHeader) {
+    console.log('mainHeader', mainHeader);
     var lastScroll = 0;
     window.addEventListener('scroll', function () {
       var currentScroll = window.scrollY;

@@ -46,10 +46,11 @@ jQuery($ => {
     });
 
     let mainHeader = document.querySelector('#main-header');
-    console.log('mainHeader', mainHeader);
+
     // add scroll class to header when scrolling up and remove when scrolling down and at top add top class
 
     if (mainHeader) {
+        console.log('mainHeader', mainHeader);
         let lastScroll = 0;
         window.addEventListener('scroll', () => {
             let currentScroll = window.scrollY;

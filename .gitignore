@@ -29,9 +29,8 @@ www/wp
 www/app/mu-plugins/*/
 www/app/plugins/*/
 !www/app/plugins/gravity-forms-acf-field
-!www/app/plugins/ithemes-security-pro
+!www/app/plugins/badrock-elementor
 !www/app/plugins/badrock
-!www/app/plugins/sendgrid-email-delivery-simplified
 !www/app/plugins/wp-rocket
 www/app/plugins/wp-rocket/cache.json
 !www/app/plugins/.gitkeep
