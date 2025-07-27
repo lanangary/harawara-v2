@@ -1,0 +1,6 @@
+<div class="true-false-field-container">
+	<label class="checkbox-item">
+		<input type="checkbox" id="{{ field.name }}" name="{{ field.name }}" value="1" {% if field.value %} checked {% endif %} {% if config.validation.required %} required {% endif %}>
+		{{ field.label }}
+	</label>
+</div>

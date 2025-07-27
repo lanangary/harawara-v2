@@ -2,6 +2,10 @@
 //Include composer autoloader
 include ABSPATH . "../../vendor/autoload.php";
 
+// Include ACF Field Detection System
+require_once get_template_directory() . '/src/ACF/SubscriberACFFieldDetector.php';
+require_once get_template_directory() . '/src/ACF/FieldValueProcessor.php';
+
 use Timber\Timber;
 
 use JuiceBox\Core\Site;

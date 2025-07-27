@@ -1,0 +1,16 @@
+<input type="range" id="{{ field.name }}" name="{{ field.name }}" value="{{ field.value|default(config.validation.min|default(0)) }}" class="form-control" min="{{ config.validation.min|default(0) }}" max="{{ config.validation.max|default(100) }}" step="{{ config.validation.step|default(1) }}" {% if config.validation.required %} required {% endif %}>
+<div class="range-value-display">
+	<span id="{{ field.name }}_value">{{ field.value|default(config.validation.min|default(0)) }}</span>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+const rangeInput = document.getElementById('{{ field.name }}');
+const valueDisplay = document.getElementById('{{ field.name }}_value');
+if (rangeInput && valueDisplay) {
+rangeInput.addEventListener('input', function () {
+valueDisplay.textContent = this.value;
+});
+}
+});
+</script>

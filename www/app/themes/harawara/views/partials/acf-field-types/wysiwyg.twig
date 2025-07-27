@@ -1,0 +1,13 @@
+<textarea id="{{ field.name }}" name="{{ field.name }}" class="form-control wysiwyg-editor" rows="6" placeholder="{{ config.ui_settings.placeholder|default('') }}" {% if config.validation.required %} required {% endif %}>{{ field.value|default('') }}</textarea>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () { // Simple WYSIWYG functionality - you can enhance this with a proper editor like TinyMCE
+const textarea = document.getElementById('{{ field.name }}');
+if (textarea) {
+textarea.addEventListener('input', function () { // Auto-resize textarea
+this.style.height = 'auto';
+this.style.height = (this.scrollHeight) + 'px';
+});
+}
+});
+</script>

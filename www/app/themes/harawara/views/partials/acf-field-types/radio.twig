@@ -1,0 +1,8 @@
+<div class="radio-group">
+	{% for value, label in config.choices %}
+		<label class="radio-item">
+			<input type="radio" name="{{ field.name }}" value="{{ value }}" {% if field.value == value %} checked {% endif %} {% if config.validation.required %} required {% endif %}>
+			{{ label }}
+		</label>
+	{% endfor %}
+</div>

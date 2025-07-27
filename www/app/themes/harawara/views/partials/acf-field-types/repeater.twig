@@ -1,0 +1,19 @@
+<div class="repeater-field-container">
+	<div class="repeater-content-info">
+		<p class="alert alert-warning">
+			<strong>Repeater Field:</strong>
+			This field type allows you to add multiple similar content items. 
+			            For now, this field is read-only. Please contact support for advanced editing capabilities.
+		</p>
+		{% if field.value %}
+			<p>
+				<strong>Current items:</strong>
+				{{ field.value|length }}
+				item(s) configured</p>
+		{% else %}
+			<p>
+				<em>No items configured yet.</em>
+			</p>
+		{% endif %}
+	</div>
+</div>

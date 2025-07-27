@@ -1,0 +1,18 @@
+<div class="post-object-field-container">
+	<div class="post-object-content-info">
+		<p class="alert alert-warning">
+			<strong>Post Object Field:</strong>
+			This field type allows you to select a specific post or page. 
+			            For now, this field is read-only. Please contact support for advanced editing capabilities.
+		</p>
+		{% if field.value %}
+			<p>
+				<strong>Current selection:</strong>
+				{{ field.value.post_title|default('Unknown post') }}</p>
+		{% else %}
+			<p>
+				<em>No post selected yet.</em>
+			</p>
+		{% endif %}
+	</div>
+</div>

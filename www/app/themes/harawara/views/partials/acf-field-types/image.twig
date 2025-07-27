@@ -1,0 +1,26 @@
+<div class="image-field-container">
+	<input type="file" id="{{ field.name }}" name="{{ field.name }}" class="form-control" accept="image/*" {% if config.validation.required and not field.value %} required {% endif %}>
+
+	{% if field.value %}
+		<div class="image-preview">
+			<img src="{{ field.value.url|default('') }}" alt="Current image">
+			<p class="current-image-text">Current image:
+				{{ field.value.filename|default('') }}</p>
+			<label>
+				<input type="checkbox" name="{{ field.name }}_remove" value="1">
+				Remove current image
+			</label>
+		</div>
+	{% endif %}
+
+	<small class="form-text text-muted">
+		{% if config.validation.file_types %}
+			Allowed types:
+			{{ config.validation.file_types }}
+		{% endif %}
+		{% if config.validation.max_size %}
+			Max size:
+			{{ config.validation.max_size }}
+		{% endif %}
+	</small>
+</div>

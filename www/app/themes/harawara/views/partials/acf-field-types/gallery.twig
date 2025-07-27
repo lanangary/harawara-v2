@@ -1,0 +1,38 @@
+<div class="gallery-field-container">
+	<div class="form-group">
+		<label for="{{ field.name }}">Add Images</label>
+		<input type="file" id="{{ field.name }}" name="{{ field.name }}[]" class="form-control" 
+			accept="image/*" multiple 
+			{% if config.validation.max_files %}data-max-files="{{ config.validation.max_files }}"{% endif %}>
+	</div>
+
+	{% if field.value %}
+		<div class="gallery-preview mt-3">
+			<h5>Current Images ({{ field.value|length }})</h5>
+			<div class="gallery-grid">
+				{% for image in field.value %}
+					<div class="gallery-item">
+						<img src="{{ image.sizes.thumbnail|default(image.url) }}" alt="{{ image.alt|default(image.filename) }}">
+						<div class="gallery-item-info">
+							<small class="text-muted">{{ image.filename|default('') }}</small>
+							<label class="form-check">
+								<input type="checkbox" name="{{ field.name }}_remove[]" value="{{ image.ID }}" class="form-check-input">
+								<span class="form-check-label">Remove</span>
+							</label>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% endif %}
+
+	<small class="form-text text-muted">
+		{% if config.validation.file_types %}
+			Allowed types: {{ config.validation.file_types }}.
+		{% endif %}
+		{% if config.validation.max_files %}
+			Max files: {{ config.validation.max_files }}.
+		{% endif %}
+		Select multiple images to add to the gallery. Existing images will be kept unless you check "Remove" for specific images.
+	</small>
+</div>

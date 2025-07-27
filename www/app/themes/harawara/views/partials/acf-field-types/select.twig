@@ -1,0 +1,12 @@
+<select id="{{ field.name }}" name="{{ field.name }}{% if config.multiple %}[]{% endif %}" class="form-control" {% if config.multiple %} multiple {% endif %} {% if config.validation.required %} required {% endif %}>
+
+	{% if not config.multiple %}
+		<option value="">-- Select an option --</option>
+	{% endif %}
+
+	{% for value, label in config.choices %}
+		<option value="{{ value }}" {% if config.multiple %} {% if field.value and value in field.value %} selected {% endif %} {% else %} {% if field.value == value %} selected {% endif %} {% endif %}>
+			{{ label }}
+		</option>
+	{% endfor %}
+</select>

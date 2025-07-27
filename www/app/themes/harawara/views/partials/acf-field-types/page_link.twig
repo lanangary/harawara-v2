@@ -1,0 +1,18 @@
+<div class="page-link-field-container">
+	<div class="page-link-content-info">
+		<p class="alert alert-warning">
+			<strong>Page Link Field:</strong>
+			This field type allows you to select a page link. 
+			            For now, this field is read-only. Please contact support for advanced editing capabilities.
+		</p>
+		{% if field.value %}
+			<p>
+				<strong>Current selection:</strong>
+				{{ field.value.post_title|default('Unknown page') }}</p>
+		{% else %}
+			<p>
+				<em>No page selected yet.</em>
+			</p>
+		{% endif %}
+	</div>
+</div>

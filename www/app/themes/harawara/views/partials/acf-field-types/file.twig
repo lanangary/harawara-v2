@@ -1,0 +1,33 @@
+<div class="file-field-container">
+	<input type="file" id="{{ field.name }}" name="{{ field.name }}" class="form-control" 
+		{% if config.validation.file_types %}accept="{{ config.validation.file_types }}"{% endif %}>
+
+	{% if field.value %}
+		<div class="file-preview mt-2">
+			<p class="current-file-text alert alert-info">
+				<strong>Current file:</strong>
+				<a href="{{ field.value.url|default('') }}" target="_blank" class="alert-link">
+					{{ field.value.filename|default(field.value.title|default('Download file')) }}
+				</a>
+			</p>
+			<label class="form-check">
+				<input type="checkbox" name="{{ field.name }}_remove" value="1" class="form-check-input">
+				<span class="form-check-label">Remove current file</span>
+			</label>
+		</div>
+	{% endif %}
+
+	<small class="form-text text-muted">
+		{% if config.validation.file_types %}
+			Allowed types: {{ config.validation.file_types }}.
+		{% endif %}
+		{% if config.validation.max_size %}
+			Max size: {{ config.validation.max_size }}.
+		{% endif %}
+		{% if not field.value %}
+			Select a file to upload.
+		{% else %}
+			Select a new file to replace the current one, or check "Remove current file" to delete it.
+		{% endif %}
+	</small>
+</div>

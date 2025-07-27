@@ -1,0 +1,19 @@
+<div class="relationship-field-container">
+	<div class="relationship-content-info">
+		<p class="alert alert-warning">
+			<strong>Relationship Field:</strong>
+			This field type allows you to select related content from other posts/pages. 
+			            For now, this field is read-only. Please contact support for advanced editing capabilities.
+		</p>
+		{% if field.value %}
+			<p>
+				<strong>Current selections:</strong>
+				{{ field.value|length }}
+				item(s) selected</p>
+		{% else %}
+			<p>
+				<em>No items selected yet.</em>
+			</p>
+		{% endif %}
+	</div>
+</div>

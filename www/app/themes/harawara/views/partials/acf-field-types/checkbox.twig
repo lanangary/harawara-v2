@@ -1,0 +1,15 @@
+<div class="checkbox-group">
+	{% if config.multiple %}
+		{% for value, label in config.choices %}
+			<label class="checkbox-item">
+				<input type="checkbox" name="{{ field.name }}[]" value="{{ value }}" {% if field.value and value in field.value %} checked {% endif %} {% if config.validation.required %} required {% endif %}>
+				{{ label }}
+			</label>
+		{% endfor %}
+	{% else %}
+		<label class="checkbox-item">
+			<input type="checkbox" name="{{ field.name }}" value="1" {% if field.value %} checked {% endif %} {% if config.validation.required %} required {% endif %}>
+			{{ field.label }}
+		</label>
+	{% endif %}
+</div>

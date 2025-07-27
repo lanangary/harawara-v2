@@ -1,0 +1,2 @@
+<input type="text" id="{{ field.name }}" name="{{ field.name }}" value="{{ field.value|default('') }}" class="form-control" placeholder="{{ config.ui_settings.placeholder|default('') }}" {% if config.validation.required %} required {% endif %}>
+<small class="form-text text-muted">Field type "{{ field.type }}" is not fully supported yet. Please contact support for assistance.</small>

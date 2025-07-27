@@ -1,0 +1,19 @@
+<div class="flexible-content-field-container">
+	<div class="flexible-content-info">
+		<p class="alert alert-warning">
+			<strong>Flexible Content Field:</strong>
+			This field type allows you to add different content layouts. 
+			            For now, this field is read-only. Please contact support for advanced editing capabilities.
+		</p>
+		{% if field.value %}
+			<p>
+				<strong>Current layouts:</strong>
+				{{ field.value|length }}
+				layout(s) configured</p>
+		{% else %}
+			<p>
+				<em>No layouts configured yet.</em>
+			</p>
+		{% endif %}
+	</div>
+</div>
