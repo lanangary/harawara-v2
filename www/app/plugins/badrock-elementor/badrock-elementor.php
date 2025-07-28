@@ -30,6 +30,7 @@ function badrock_elementor_load_widget()
 {
     require_once plugin_dir_path(__FILE__) . 'includes/class-badrock-elementor-widget.php';
     require_once plugin_dir_path(__FILE__) . 'widget/slider/widget.php'; // Ensure slider widget is included
+    require_once plugin_dir_path(__FILE__) . 'widget/opening/widget.php'; // Ensure opening widget is included
 }
 add_action('elementor/widgets/widgets_registered', 'badrock_elementor_load_widget');
 

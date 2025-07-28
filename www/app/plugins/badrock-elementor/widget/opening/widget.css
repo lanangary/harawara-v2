@@ -1,0 +1,192 @@
+/* Badrock Opening Widget Styles */
+.badrock-opening-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.badrock-opening-overlay.closing {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.badrock-opening-content {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    border-radius: 0;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.badrock-opening-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.badrock-opening-text {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.badrock-opening-names {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.badrock-opening-names .separator {
+    margin: 0 15px;
+    font-style: italic;
+}
+
+.badrock-opening-date {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.badrock-opening-button {
+    background-color: #d4af37;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badrock-opening-button:hover {
+    background-color: #b8941f;
+    transform: translateY(-2px);
+}
+
+.badrock-opening-button:active {
+    transform: translateY(0);
+}
+
+/* Animation Classes */
+/* Default state for content - ready for animation */
+.badrock-opening-content {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+}
+
+/* Fade Animation */
+.badrock-opening-overlay[data-animation="fade"].closing .badrock-opening-content {
+    opacity: 0;
+}
+
+/* Slide Up Animation */
+.badrock-opening-overlay[data-animation="slide-up"].closing .badrock-opening-content {
+    transform: translateY(-100vh);
+}
+
+/* Slide Down Animation */
+.badrock-opening-overlay[data-animation="slide-down"].closing .badrock-opening-content {
+    transform: translateY(100vh);
+}
+
+/* Slide Left Animation */
+.badrock-opening-overlay[data-animation="slide-left"].closing .badrock-opening-content {
+    transform: translateX(-100vw);
+}
+
+/* Slide Right Animation */
+.badrock-opening-overlay[data-animation="slide-right"].closing .badrock-opening-content {
+    transform: translateX(100vw);
+}
+
+/* Zoom Out Animation */
+.badrock-opening-overlay[data-animation="zoom-out"].closing .badrock-opening-content {
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .badrock-opening-content {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .badrock-opening-inner {
+        padding: 30px 15px;
+    }
+    
+    .badrock-opening-names {
+        font-size: 24px;
+    }
+    
+    .badrock-opening-text {
+        font-size: 16px;
+    }
+    
+    .badrock-opening-date {
+        font-size: 18px;
+    }
+    
+    .badrock-opening-button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .badrock-opening-content {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .badrock-opening-inner {
+        padding: 20px 10px;
+    }
+    
+    .badrock-opening-names {
+        font-size: 20px;
+    }
+    
+    .badrock-opening-names .separator {
+        margin: 0 10px;
+    }
+    
+    .badrock-opening-text {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .badrock-opening-date {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+}

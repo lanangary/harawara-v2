@@ -18,11 +18,13 @@
             },
             "relevanssi_exclude": 0,
             "choices": {
-                "nivala": "Nivala",
-                "narayana": "Narayana",
-                "jiwa": "Jiwa"
+                "nirata": "Nirata",
+                "amora": "Amora",
+                "jiwa": "Jiwa",
+                "asoka": "Asoka",
+                "naraya": "Naraya"
             },
-            "default_value": "nivala",
+            "default_value": "nirata",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -59,6 +61,667 @@
             "mime_types": "",
             "insert": "append",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_universal_tab",
+            "label": "Universal Fields",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_68863aca905ea",
+            "label": "Nama Pengantin Pria",
+            "name": "nama_pengantin_pria",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68863adf905eb",
+            "label": "Nama Pengantin Wanita",
+            "name": "nama_pengantin_wanita",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_groom_parents",
+            "label": "Nama Orang Tua Pengantin Pria",
+            "name": "nama_orang_tua_pengantin_pria",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_bride_parents",
+            "label": "Nama Orang Tua Pengantin Wanita",
+            "name": "nama_orang_tua_pengantin_wanita",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_wedding_date",
+            "label": "Tanggal Pernikahan",
+            "name": "tanggal_pernikahan",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1,
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_wedding_time",
+            "label": "Waktu Pernikahan",
+            "name": "waktu_pernikahan",
+            "aria-label": "",
+            "type": "time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "display_format": "g:i a",
+            "return_format": "g:i a",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_wedding_venue",
+            "label": "Tempat Pernikahan",
+            "name": "tempat_pernikahan",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_wedding_address",
+            "label": "Alamat Lengkap Tempat Pernikahan",
+            "name": "alamat_tempat_pernikahan",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "allow_in_bindings": 0,
+            "new_lines": ""
+        },
+        {
+            "key": "field_google_maps_link",
+            "label": "Link Google Maps",
+            "name": "link_google_maps",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": "https:\/\/maps.google.com\/..."
+        },
+        {
+            "key": "field_couple_gallery",
+            "label": "Galeri Foto Pengantin",
+            "name": "galeri_foto_pengantin",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "return_format": "array",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_invitation_message",
+            "label": "Pesan Undangan",
+            "name": "pesan_undangan",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "allow_in_bindings": 0,
+            "new_lines": ""
+        },
+        {
+            "key": "field_template_specific_tab",
+            "label": "Template Specific Fields",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_quranic_verse",
+            "label": "Ayat Al-Quran",
+            "name": "ayat_alquran",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Khusus untuk template Amora",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "amora"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "allow_in_bindings": 0,
+            "new_lines": ""
+        },
+        {
+            "key": "field_verse_reference",
+            "label": "Referensi Ayat",
+            "name": "referensi_ayat",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Contoh: QS. Ar-Rum: 21",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "amora"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_social_media_groom",
+            "label": "Instagram Pengantin Pria",
+            "name": "instagram_pengantin_pria",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Untuk template Amora dan Naraya",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "amora"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "naraya"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": "https:\/\/instagram.com\/username"
+        },
+        {
+            "key": "field_social_media_bride",
+            "label": "Instagram Pengantin Wanita",
+            "name": "instagram_pengantin_wanita",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Untuk template Amora dan Naraya",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "amora"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "naraya"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": "https:\/\/instagram.com\/username"
+        },
+        {
+            "key": "field_hindu_blessing",
+            "label": "Salam Hindu (Om Swastiastu)",
+            "name": "salam_hindu",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Khusus untuk template Asoka",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "asoka"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "Om Swastiastu",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
+            "allow_in_bindings": 0,
+            "new_lines": ""
+        },
+        {
+            "key": "field_spiritual_quote",
+            "label": "Kutipan Spiritual",
+            "name": "kutipan_spiritual",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Untuk template Asoka dan Nirata",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "asoka"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "nirata"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "allow_in_bindings": 0,
+            "new_lines": ""
+        },
+        {
+            "key": "field_rsvp_tracking",
+            "label": "RSVP Tracking",
+            "name": "rsvp_tracking",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Khusus untuk template Naraya",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "naraya"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_total_invited",
+                    "label": "Total Undangan",
+                    "name": "total_undangan",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": 0,
+                    "min": 0,
+                    "max": "",
+                    "allow_in_bindings": 0,
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_confirmed_attendees",
+                    "label": "Konfirmasi Hadir",
+                    "name": "konfirmasi_hadir",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": 0,
+                    "min": 0,
+                    "max": "",
+                    "allow_in_bindings": 0,
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_declined_attendees",
+                    "label": "Tidak Hadir",
+                    "name": "tidak_hadir",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": 0,
+                    "min": 0,
+                    "max": "",
+                    "allow_in_bindings": 0,
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_uncertain_attendees",
+                    "label": "Ragu-ragu",
+                    "name": "ragu_ragu",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": 0,
+                    "min": 0,
+                    "max": "",
+                    "allow_in_bindings": 0,
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_language_toggle",
+            "label": "Dukungan Bahasa",
+            "name": "dukungan_bahasa",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Untuk template Jiwa dan Asoka",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "jiwa"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6873389010101",
+                        "operator": "==",
+                        "value": "asoka"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "choices": {
+                "indonesian": "Bahasa Indonesia",
+                "english": "English",
+                "bilingual": "Bilingual (Indonesia & English)"
+            },
+            "default_value": "indonesian",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_color_scheme",
+            "label": "Skema Warna",
+            "name": "skema_warna",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Warna utama template",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "#000000",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -79,5 +742,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753375782
+    "modified": 1753711352
 }

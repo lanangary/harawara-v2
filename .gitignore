@@ -31,6 +31,7 @@ www/app/plugins/*/
 !www/app/plugins/gravity-forms-acf-field
 !www/app/plugins/badrock-elementor
 !www/app/plugins/badrock
+!www/app/plugins/rsvp-plugin
 !www/app/plugins/wp-rocket
 www/app/plugins/wp-rocket/cache.json
 !www/app/plugins/.gitkeep
